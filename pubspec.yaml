@@ -1,0 +1,17 @@
+name: tron
+description: Dart API Library for interacting with the TRON Network.
+version: 0.0.1
+homepage: https://pwa.ir
+repository: https://github.com/xclud/dart_tron/
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  protobuf_google: ^0.0.1
+  protobuf: ^2.0.1
+  grpc: ^3.0.2
+
+dev_dependencies:
+  test: ^1.20.0
+  lints: ^1.0.1
