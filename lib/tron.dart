@@ -10,11 +10,6 @@ export 'src/grpc/api/zksnark.pbenum.dart';
 export 'src/grpc/api/zksnark.pbgrpc.dart';
 export 'src/grpc/api/zksnark.pbjson.dart';
 
-export 'src/grpc/api/zksnark.pb.dart';
-export 'src/grpc/api/zksnark.pbenum.dart';
-export 'src/grpc/api/zksnark.pbgrpc.dart';
-export 'src/grpc/api/zksnark.pbjson.dart';
-
 export 'src/grpc/core/discover.pb.dart';
 export 'src/grpc/core/discover.pbenum.dart';
 export 'src/grpc/core/discover.pbjson.dart';
@@ -74,3 +69,5 @@ export 'src/grpc/core/contract/vote_asset_contract.pbjson.dart';
 export 'src/grpc/core/contract/witness_contract.pb.dart';
 export 'src/grpc/core/contract/witness_contract.pbenum.dart';
 export 'src/grpc/core/contract/witness_contract.pbjson.dart';
+
+export 'src/api_key_interceptor.dart';
