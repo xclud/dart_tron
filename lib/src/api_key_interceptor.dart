@@ -12,14 +12,18 @@ class ApiKeyInterceptor extends ClientInterceptor {
   @override
   ResponseFuture<R> interceptUnary<Q, R>(ClientMethod<Q, R> method, Q request,
       CallOptions options, ClientUnaryInvoker<Q, R> invoker) {
-    final meta = Map<String, String>.from(options.metadata);
-    meta['TRON-PRO-API-KEY'] = apiKey;
+    final metadata = Map<String, String>.from(options.metadata);
+    metadata['TRON-PRO-API-KEY'] = apiKey;
 
-    return super.interceptUnary(
+    return invoker.call(
       method,
       request,
-      CallOptions(metadata: meta),
-      invoker,
+      CallOptions(
+        metadata: metadata,
+        compression: options.compression,
+        providers: options.metadataProviders,
+        timeout: options.timeout,
+      ),
     );
   }
 
@@ -30,14 +34,18 @@ class ApiKeyInterceptor extends ClientInterceptor {
       Stream<Q> requests,
       CallOptions options,
       ClientStreamingInvoker<Q, R> invoker) {
-    final meta = Map<String, String>.from(options.metadata);
-    meta['TRON-PRO-API-KEY'] = apiKey;
+    final metadata = Map<String, String>.from(options.metadata);
+    metadata['TRON-PRO-API-KEY'] = apiKey;
 
-    return super.interceptStreaming(
+    return invoker.call(
       method,
       requests,
-      CallOptions(metadata: meta),
-      invoker,
+      CallOptions(
+        metadata: metadata,
+        compression: options.compression,
+        providers: options.metadataProviders,
+        timeout: options.timeout,
+      ),
     );
   }
 }
