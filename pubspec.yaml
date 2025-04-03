@@ -9,7 +9,7 @@ environment:
 
 dependencies:
   fixnum: ^1.1.1
-  protobuf_google: ^0.0.1
+  protobuf_google: ^1.0.0
   protobuf: ^4.0.0
   grpc: ^4.0.4
 
